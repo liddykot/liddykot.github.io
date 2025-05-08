@@ -25,6 +25,7 @@
       padding: 40px 20px 120px 20px;
       line-height: 1.7;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     .card {
@@ -35,6 +36,18 @@
       max-width: 700px;
       width: 100%;
       text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     img.profile-pic {
@@ -45,6 +58,18 @@
       border: 5px solid var(--accent);
       box-shadow: 0 6px 18px var(--shadow);
       margin-bottom: 25px;
+      animation: scaleIn 1s ease-out;
+    }
+
+    @keyframes scaleIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     h1 {
@@ -77,6 +102,7 @@
       justify-content: center;
       gap: 28px;
       margin: 30px 0;
+      animation: fadeInUp 1.4s ease-out;
     }
 
     .social-links a {
@@ -95,12 +121,14 @@
       font-size: 1.6rem;
       font-style: italic;
       color: var(--text);
+      animation: fadeInUp 2s ease-out;
     }
 
     .copyright {
       margin-top: 40px;
       font-size: 0.9rem;
       color: #777;
+      animation: fadeInUp 2.4s ease-out;
     }
 
     @media (max-width: 600px) {
